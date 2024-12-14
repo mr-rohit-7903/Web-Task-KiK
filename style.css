@@ -24,10 +24,56 @@ header nav{
     font-size: 1.5rem;
 }
 header nav a{
-    margin-right: 1.2rem;
+    margin-right: 2rem;
     text-decoration: none;
     color: #000;
 }
 header nav a:hover{
     color: orange;
 }
+/* Header ends */
+
+/* Search Bar starts */
+.searchBar{
+    padding-top: 5rem;
+    height: 20vh;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar .searchBox{
+    background-color: greenyellow;
+    height: 3rem;
+    width: 40rem;
+    border-radius: 25px;
+    display: flex;
+}
+.searchBar .searchBox input{
+    height: 100%;
+    border-radius: 25px 0 0 25px;
+    padding-left: 3rem;
+    width: 92%;
+    border: none;
+    font-size: 1.5rem;
+}
+.searchBar .searchBox input:focus{
+    border:none;
+    outline: none;
+}
+.searchBar .searchBox .searchIcon{
+    height: 100%;
+    width: 8%;
+    border-radius: 0 25px 25px 0;
+}
+.searchBar .searchBox .searchIcon:hover{
+    background-color: #000;
+}
+.searchBar .searchBox .searchIcon i{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.7rem 0.2rem 0 0.6rem;
+}
+/* Search Bar ends */
+
