@@ -10,6 +10,7 @@ function updateWeather(){
         .then(data => {
         
         const name = data.location.name // Name of city
+        const date = data.current.last_updated // date and time
         const tempC = data.current.temp_c; // Temperature in °C
         const des = data.current.condition.text // Weather description
         const humidity = data.current.humidity; // Humidity percentage
@@ -33,7 +34,7 @@ function updateWeather(){
         };
         const weatherImg = WeatherImage.Images[des];
 
-        document.querySelector(".cityName").textContent = name;
+        document.querySelector(".cityName").textContent = `${name} ${date}`;
         document.querySelector(".temperature").innerHTML = `${tempC} °C`;
         document.querySelector(".description").innerHTML = des;
         document.querySelector(".humidity").innerHTML = `Humidity: ${humidity}%`;

@@ -210,6 +210,10 @@ header .hamburger{
     box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
     margin: 1.25rem;
 }
+.about img{
+    background-size: contain;
+    height: 20vh;
+}
 .about h2 {
     font-size: 3rem;
     color: #333;
@@ -319,6 +323,15 @@ header .hamburger{
 }
 .footerContent .socialLinks a:hover{
     background: #ffa500;
+}
+.footerBottom{
+    display: flex;
+    flex-direction: column;
+}
+.footerBottom a{
+    color:#ecf0f1;
+    text-decoration: none;
+    
 }
 /* Footer section ends */
 
@@ -487,3 +500,10 @@ header .hamburger{
 
 }
 /* Responsive footer ends */
+
+
+/* Extras */
+.back{
+    text-decoration: none;
+    color: #e0f7fa;
+}
