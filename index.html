@@ -28,8 +28,43 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
         </div>
+        <div class="switch">
+            <h3>Change to Farenheit </h3>
+            <label class="toggle">
+                <input type="checkbox" id="myToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
     </section>
-    <section></section>
+
+    <!-- Details  -->
+    <section class="main">
+        <div class="content">
+            <div id="line1">
+                <h2 class="cityName">London</h2>
+                <div>
+                    <img class="weatherImg" src="images/clear.png" onerror="this.src='images/clear.png'">
+                    <div>
+                        <p class="temperature">25°C</p>
+                        <p class="description">Sunny</p>
+                    </div>
+                </div>
+            </div>
+            <div id="line2">
+                <div>
+                    <img id="humidityImg" src="images/humidity.png" alt="">
+                    <p class="humidity">Humidity: 60%</p>
+                </div>
+                <div>
+                    <img id="windSpeedImg" src="images/wind.png" alt="">
+                    <p class="windSpeed">Wind: 10 m/h</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+
     <footer></footer>
     
     <script src="script.js"></script>

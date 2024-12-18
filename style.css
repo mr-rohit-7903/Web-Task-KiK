@@ -9,6 +9,7 @@
 header{
     height: 4rem;
     width: 100%;
+    background: #e0f7fa;
     border-bottom: 1px solid #000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -36,15 +37,16 @@ header nav a:hover{
 /* Search Bar starts */
 .searchBar{
     padding-top: 5rem;
-    height: 20vh;
-    background-color: red;
+    height: 28vh;
+    background: linear-gradient(to bottom, #ffccbc, rgba(255, 204, 188, 0));
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-
 .searchBar .searchBox{
     background-color: greenyellow;
+    border: 1px solid black;
     height: 3rem;
     width: 40rem;
     border-radius: 25px;
@@ -77,3 +79,113 @@ header nav a:hover{
 }
 /* Search Bar ends */
 
+/* Main section starts */
+.main{
+    height:80vh;
+    background: #000;
+    background-image: url("https://images.pexels.com/photos/1647120/pexels-photo-1647120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .content{
+    width: 90%;
+    height: 90%;
+    backdrop-filter: blur(10px);
+    border-radius: 5rem;
+    /* border: 1px solid black; */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.main .content #line1,
+.main .content #line2
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 7rem;
+}
+.main .content .cityName{
+    font-size: 3rem;
+}
+.main .content #line1 img{
+    height: 10rem;
+    width: 10rem;
+}
+.main .content #line1 div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .content #line1 div div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main .content #line1 p{
+    font-size: 2rem;
+}
+.main .content #line2{
+    margin-top: 5rem;
+}
+.main .content #line2 div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main .content #line2 p{
+    padding: 2rem 0;
+    font-size: 2rem;
+}
+
+/* toggle button  */
+.switch{
+    display: flex;
+    align-items: center;
+    padding: 2rem 0 0 0;
+}
+.toggle{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin : 0 0 0 2rem;
+}
+.toggle #myToggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+#myToggle:checked + .slider {
+    background-color: #4caf50;
+}
+#myToggle:checked + .slider:before {
+    transform: translateX(26px);
+}
