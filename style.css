@@ -5,6 +5,11 @@
     font: "arial";
 }
 
+/* Smooth Scroll  */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Hide scrollbar */
 body::-webkit-scrollbar {
     display: none;
