@@ -5,6 +5,11 @@
     font: "arial";
 }
 
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+    display: none;
+}
+
 /* Header starts */
 header{
     height: 4rem;
@@ -17,6 +22,7 @@ header{
     justify-content: space-between;
     padding: 0 5rem;
     position: fixed;
+    z-index: 100;
 }
 header .name{
     font-size: 2.5rem;
@@ -30,7 +36,7 @@ header nav a{
     color: #000;
 }
 header nav a:hover{
-    color: orange;
+    color: #ffa500;
 }
 /* Header ends */
 
@@ -45,7 +51,7 @@ header nav a:hover{
     flex-direction: column;
 }
 .searchBar .searchBox{
-    background-color: greenyellow;
+    background-color: rgb(255, 255, 255);
     border: 1px solid black;
     height: 3rem;
     width: 40rem;
@@ -61,7 +67,7 @@ header nav a:hover{
     font-size: 1.5rem;
 }
 .searchBar .searchBox input:focus{
-    border:none;
+    border: none;
     outline: none;
 }
 .searchBar .searchBox .searchIcon{
@@ -70,7 +76,7 @@ header nav a:hover{
     border-radius: 0 25px 25px 0;
 }
 .searchBar .searchBox .searchIcon:hover{
-    background-color: #000;
+    background-color: #dbdbdb;
 }
 .searchBar .searchBox .searchIcon i{
     text-align: center;
@@ -81,7 +87,7 @@ header nav a:hover{
 
 /* Main section starts */
 .main{
-    height:80vh;
+    min-height:80vh;
     background: #000;
     background-image: url("https://images.pexels.com/photos/1647120/pexels-photo-1647120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-size: cover;
@@ -119,12 +125,12 @@ header nav a:hover{
     align-items: center;
     justify-content: center;
 }
-
 .main .content #line1 div div{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-left: 3rem;
 }
 .main .content #line1 p{
     font-size: 2rem;
@@ -142,8 +148,9 @@ header nav a:hover{
     padding: 2rem 0;
     font-size: 2rem;
 }
+/* Main section ends */
 
-/* toggle button  */
+/* toggle button starts */
 .switch{
     display: flex;
     align-items: center;
@@ -189,3 +196,125 @@ header nav a:hover{
 #myToggle:checked + .slider:before {
     transform: translateX(26px);
 }
+/* Toggle button ends  */
+
+/* About section starts  */
+.about {
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+    margin: 1.25rem;
+}
+.about h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 0.625rem;
+    text-align: center;
+}
+.about h3 {
+    font-size: 2rem;
+    color: #555;
+    margin-top: 3rem;
+    margin-bottom: 0.625rem;
+}
+.about p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0.9375rem;
+}
+.about ul {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+}
+.about li {
+    font-size: 1.3rem;
+    margin-bottom: 0.625rem;
+    color: #444;
+}
+/* About section ends */
+
+/* Footer section starts  */
+.footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 3rem 0 1rem 0;
+    text-align: center;
+}
+.footerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 4rem;
+}
+.footerContent .logo{
+    width: 30rem;
+}
+.footerContent .logo h2{
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+.footerContent .logo p{
+    font-size: 1.5rem;
+}
+.footerContent .quickLinks {
+    width: 20rem;
+    text-align: left;
+}
+.footerContent .quickLinks h3{
+    font-size: 2rem;
+
+}
+.footerContent .quickLinks ul{
+    list-style: none;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+.footerContent .quickLinks li{
+    margin-top: 0.5rem;
+}
+.footerContent .quickLinks li a{
+    text-decoration: none;
+    color:#e0f7fa;
+}
+.footerContent .quickLinks li a i{
+    padding-right: 0.5rem;
+}
+.footerContent .socialLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footerContent .socialLinks a{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    margin-right: 0.5rem;
+    background: #ecf0f1;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center; 
+}
+.footerContent .socialLinks a{
+    font-size: 1.6rem;
+    color:#2c3e50
+}
+.footer .credit{
+    padding-top: 0.4rem;
+    font-size: 1.2rem;
+}
+.footer .credit a{
+    color: #ecf0f1;
+    text-decoration: none;
+}
+.footer .credit a:hover,
+.footerContent .quickLinks li a:hover{
+    color: #ffa500;
+}
+.footerContent .socialLinks a:hover{
+    background: #ffa500;
+}
+/* Footer section ends */

@@ -40,11 +40,14 @@ function updateWeather(){
         document.querySelector(".windSpeed").innerHTML = `Wind: ${windSpeed} m/h`;
         document.querySelector(".weatherImg").src = weatherImg;
 
-        console.log(`Temperature: ${tempC}°C`);
-        console.log(`Humidity: ${humidity}%`);
-        console.log(`Wind Speed: ${windSpeed} mph`);
     })
-    .catch(error => console.error('Error:', error));
+    .catch(() => {
+        document.querySelector(".cityName").textContent = "City Not Found";
+        document.querySelector(".temperature").innerHTML = `0 °C`;
+        document.querySelector(".description").innerHTML = "-----";
+        document.querySelector(".humidity").innerHTML = `Humidity: --%`;
+        document.querySelector(".windSpeed").innerHTML = `Wind: -- m/h`;
+    });
 }
 
 // Function to add Background Image 
@@ -76,6 +79,7 @@ submit.addEventListener("click", () => {
     const enteredCity = search.value.trim();
     if (enteredCity) {
         city = enteredCity
+        document.getElementById('myToggle').checked = false
         updateWeather();
         addBgImg();
         search.value = "";
@@ -83,6 +87,12 @@ submit.addEventListener("click", () => {
         alert("Please enter a city name.");
     }
 });
+search.addEventListener("keydown", (event) => {
+    if (event.key == "Enter") { 
+        submit.click();
+    }
+});
+
 
 // Toggle button 
 document.getElementById('myToggle').addEventListener('change', function () {
@@ -91,10 +101,11 @@ document.getElementById('myToggle').addEventListener('change', function () {
     if (this.checked) {
         const tempC = parseFloat(tempText.replace("°C", ""));
         const tempF = (tempC * 9) / 5 + 32;
-        tempElement.innerHTML = `${tempF} °F`;
+        tempElement.innerHTML = `${tempF.toFixed(1)} °F`;
     } else {
         const tempF = parseFloat(tempText.replace("°F", ""));
         const tempC = (tempF - 32) * 5 / 9;
-        tempElement.innerHTML = `${tempC} °C`;
+        tempElement.innerHTML = `${tempC.toFixed(1)} °C`;
     }
 });
+

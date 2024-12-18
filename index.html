@@ -13,10 +13,10 @@
     <header>
         <div class="name">Weather</div>
         <nav>
-            <a href="">Search</a>
-            <a href="">Details</a>
-            <a href="">About</a>
-            <a href="">Footer</a>
+            <a onclick="document.getElementById('search').focus();">Search</a>
+            <a href="#main">Details</a>
+            <a href="#about">About</a>
+            <a href="#footer">Footer</a>
         </nav>
     </header>
 
@@ -38,7 +38,7 @@
     </section>
 
     <!-- Details  -->
-    <section class="main">
+    <section class="main" id="main">
         <div class="content">
             <div id="line1">
                 <h2 class="cityName">London</h2>
@@ -64,9 +64,86 @@
         
     </section>
 
+    <section class="about" id="about">
+        <h2>About</h2>
+        <p>This project is a web-based application designed to provide real-time weather information for various cities around the world. The primary objective is to create a user-friendly interface that allows users to easily search for a city and view its current weather conditions.</p>
+        
+        <h3>Key Features:</h3>
+        <ul>
+            <li><strong>City Search Functionality:</strong> Users can input the name of a city to retrieve its weather details.</li>
+            <li><strong>Current Weather Display:</strong> The application shows essential weather information, including temperature, humidity, and wind speed, along with a descriptive weather condition.</li>
+            <li><strong>Temperature Unit Toggle:</strong> Users have the option to switch between Celsius and Fahrenheit for temperature readings.</li>
+            <li><strong>Responsive Design:</strong> The application is designed to be accessible on multiple devices, ensuring a consistent user experience across desktops, tablets, and smartphones.</li>
+        </ul>
 
-    <footer></footer>
+        <h3>Technologies Used:</h3>
+        <ul>
+            <li><strong>HTML:</strong> For structuring the web pages.</li>
+            <li><strong>CSS:</strong> For styling the application and enhancing the user interface.</li>
+            <li><strong>JavaScript:</strong> For implementing dynamic features and handling user interactions.</li>
+            <li><strong>Font Awesome:</strong> For incorporating icons to improve visual representation.</li>
+        </ul>
+
+        <h3>APIs Used:</h3>
+        <ul>
+            <li><strong>WeatherAPI:</strong> Provides real-time weather data for various cities.</li>
+            <li><strong>Pexels API:</strong> Supplies background images based on the searched city.</li>
+        </ul>
+    </section>
+
+
+    <section class="footer" id="footer">
+        <div class="footerContent">
+            <div class="logo">
+                <h2>Weather App</h2>
+                <p>Thank you for using our application to stay updated with real-time weather information.</p>
+            </div>
+            <div class="quickLinks">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a onclick="document.getElementById('search').focus();"><i class="fas fa-chevron-circle-right"></i>Search</a></li>
+                    <li><a href="#main"><i class="fas fa-chevron-circle-right"></i>Details</a></li>
+                    <li><a href="#about"><i class="fas fa-chevron-circle-right"></i>About</a></li>
+                    <li><a href="#footer"><i class="fas fa-chevron-circle-right"></i>Footer</a></li>
+                </ul>
+            </div>
+            <div class="socialLinks">
+                <a href="https://www.linkedin.com/in/mr-rohit-/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/mr-rohit-7903" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:rohit098bej@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank">
+                </a>
+                <a href="https://mr-rohit-7903.github.io/Portfolio-Final/" target="_blank" aria-label="Main Website">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>&copy; 2024 Weather App. All rights reserved.</p>
+        </div>
+        <h1 class="credit">
+            Designed with <i class="fa fa-heart pulse"></i> by <a href=""> Rohit Bej</a>
+        </h1>
+    </section>
     
     <script src="script.js"></script>
+    <script>
+        // Smooth scrolling for navbar links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
