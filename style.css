@@ -38,6 +38,9 @@ header nav a{
 header nav a:hover{
     color: #ffa500;
 }
+header .hamburger{
+    display: none;
+}
 /* Header ends */
 
 /* Search Bar starts */
@@ -318,3 +321,169 @@ header nav a:hover{
     background: #ffa500;
 }
 /* Footer section ends */
+
+
+/* Responsive footer */
+/* Responsive for screens less than 750px */
+@media (max-width: 1000px) {
+    .main .content .cityName {
+        font-size: 2.5rem;
+    }
+    .main .content #line1 p,
+    .main .content #line2 p {
+        font-size: 1.5rem;
+    }
+    .about h2 {
+        font-size: 2.5rem;
+    }
+    .about h3 {
+        font-size: 1.8rem;
+    }
+    .about p {
+        font-size: 1.2rem;
+    }
+    .footerContent {
+        flex-direction: column;
+    }
+    .footerContent .logo,
+    .footerContent .quickLinks,
+    .footerContent .socialLinks {
+        width: 60%;
+        text-align: center;
+    }
+    .footerContent .logo p{
+        margin-bottom: 1rem;
+        margin-top: -1rem;
+    }
+    .footerContent .quickLinks {
+        margin-top: 2rem;
+    }
+    .footerContent .socialLinks {
+        margin: 3rem 0 -1rem 0;
+    }
+}
+/* Responsive for screens less than 750px */
+@media (max-width: 750px) {
+    header {
+        padding-left: 2rem;
+    }
+    header nav{
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: 101;
+        display: none;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: #e0f7fa;
+        position: absolute;
+        transition: opacity 0.3s ease;
+    }
+    header nav a{
+        height: 5rem;
+        width: 60%;
+        text-align: center;
+        background: #666;
+        color: #fff;
+        border-radius: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: -10rem 0;
+    }
+    header .hamburger{
+        display: flex;
+        position: relative;
+        right: -3rem;
+        font-size: 1.5rem;
+        z-index: 102;
+        cursor: pointer;
+    }
+    header .active{
+        display: flex;
+    }
+    .main{
+        height: 100vh;
+    }
+    .main .content .cityName {
+        font-size: 4rem;
+        text-align: left;
+    }
+    .main .content #line1,
+    .main .content #line2 {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 2.2rem;
+    }
+    .main .content #line1 div{
+        margin-top: 3rem;
+    }
+    .main .content #line1 div ,
+    .main .content #line2 div{
+        flex-direction: row;
+    }
+    .main .content #line1 div div{
+        margin-left: 0;
+        margin-top: -1rem;
+    }
+    .main .content #line1 p,
+    .main .content #line2 p {
+        font-size: 2rem;
+    } 
+    .main .content #line2{
+        margin-top: -2rem;
+    }
+    .main .content #line2 img{
+        height: 10rem;
+        width: 10rem;
+        padding: 2.5rem;
+    }
+    .about h2 {
+        font-size: 2rem;
+    }
+    .about h3 {
+        font-size: 1.5rem;
+    }
+    .footerContent .logo,
+    .footerContent .quickLinks,
+    .footerContent .socialLinks {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px){
+    .searchBar .searchBox{
+        width: 90%;
+    } 
+    .searchBar .searchBox .searchIcon i{
+        font-size: 1rem;
+        padding-top: 0.9rem;
+    }
+    .searchBar .searchBox input{
+        font-size: 1rem;
+        width: 90%;
+    }
+    .searchBar .searchBox .searchIcon{
+        width: 10%;
+    }
+    .main .content{
+        height: 70%;
+    }
+    .main .content #line1,
+    .main .content #line2{
+        margin-left: 0;
+    }
+    .main .content .cityName{
+        font-size: 2.5rem;
+        margin: 2rem 0 -2rem 2rem;
+    }
+    .main .content img{
+        height: 7rem;
+        width: 7rem;
+    }
+
+}
+/* Responsive footer ends */

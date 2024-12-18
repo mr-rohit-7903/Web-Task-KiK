@@ -109,3 +109,15 @@ document.getElementById('myToggle').addEventListener('change', function () {
     }
 });
 
+// Hamburger 
+const ham = document.querySelector(".hamburger");
+const nav = document.querySelector("nav");
+ham.addEventListener("click", ()=>{
+    nav.classList.toggle("active");
+});
+const menu = document.querySelectorAll("nav a");
+menu.forEach(item => {
+    item.addEventListener("click", () => {
+        nav.classList.remove("active");
+    });
+});
