@@ -14,6 +14,6 @@ A web-based application designed to provide real-time weather information for va
 - HTML
 - CSS
 - JavaScript
-- Font Awesome (for icons)
-- WeatherAPI (for real-time weather data)
-- Pexels API (for background images based on the searched city)
+- Font Awesome(https://fontawesome.com/icons) (for icons)
+- WeatherAPI(https://fontawesome.com/icons) (for real-time weather data)
+- Pexels API(https://www.pexels.com/api/) (for background images based on the searched city)

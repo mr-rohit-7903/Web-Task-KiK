@@ -121,3 +121,6 @@ menu.forEach(item => {
         nav.classList.remove("active");
     });
 });
+
+updateWeather();
+addBgImg();
