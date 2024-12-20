@@ -5,7 +5,7 @@ let city = 'London';
 
 // Function to update Weather data
 function updateWeather(){
-    fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
         .then(response => response.json())
         .then(data => {
         
