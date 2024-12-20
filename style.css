@@ -423,7 +423,7 @@ header .hamburger{
         display: flex;
     }
     .main{
-        height: 100vh;
+        min-height: 100vh;
     }
     .main .content .cityName {
         font-size: 4rem;
