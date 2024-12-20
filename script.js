@@ -43,6 +43,7 @@ function updateWeather(){
 
     })
     .catch(() => {
+        // For error: Default data
         document.querySelector(".cityName").textContent = "City Not Found";
         document.querySelector(".temperature").innerHTML = `0 °C`;
         document.querySelector(".description").innerHTML = "-----";
@@ -70,7 +71,7 @@ function addBgImg(){
             console.error('No photos found for the given query.');
         }
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => console.error('Error:', error)); // For error: Default background is already set in CSS line 100
 }
 
 // Event listener to the search icon
@@ -88,6 +89,8 @@ submit.addEventListener("click", () => {
         alert("Please enter a city name.");
     }
 });
+
+// Enter Button Functionality
 search.addEventListener("keydown", (event) => {
     if (event.key == "Enter") { 
         submit.click();
@@ -95,7 +98,7 @@ search.addEventListener("keydown", (event) => {
 });
 
 
-// Toggle button 
+// Toggle button to change to Celsius or Fahrenheit
 document.getElementById('myToggle').addEventListener('change', function () {
     const tempElement = document.querySelector(".temperature");
     const tempText = tempElement.innerHTML;

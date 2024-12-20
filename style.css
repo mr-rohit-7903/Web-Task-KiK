@@ -341,8 +341,8 @@ header .hamburger{
 /* Footer section ends */
 
 
-/* Responsive footer */
-/* Responsive for screens less than 750px */
+/* Responsive */
+/* Responsive for screens less than 1000px */
 @media (max-width: 1000px) {
     .main .content .cityName {
         font-size: 2.5rem;
@@ -471,7 +471,7 @@ header .hamburger{
         text-align: center;
     }
 }
-
+/* Responsive for screens less than 700px  */
 @media (max-width: 700px){
     .searchBar .searchBox{
         width: 90%;
@@ -504,7 +504,7 @@ header .hamburger{
     }
 
 }
-/* Responsive footer ends */
+/* Responsive */
 
 
 /* Extras */
