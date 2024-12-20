@@ -1,4 +1,4 @@
-const apiKey = '13304bfd2fab4923936123123241512'; // WeatherAPI key
+const apiKey = '067ccddf228f4a078af63442242012'; // WeatherAPI key
 const apiKey2 = '0qV2MDR1yvimMC5C0sqHOSqPI44U8q6D9WX6PIuBeDrAkzn0vMsL2J2n';  // Pexels API key
 
 let city = 'London';
